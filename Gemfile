@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+# bootstrap
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+# simple form
+gem 'simple_form', '~> 4.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
@@ -48,6 +53,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # guard
+  gem 'guard', '~> 2.15'
+  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
